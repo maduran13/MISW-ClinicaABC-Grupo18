@@ -1,13 +1,13 @@
-from flask import jsonify
 from flask_restful import Resource
-import requests
-from datetime import datetime
-from ..modelos import db, HealthyCheck
+from flask import Response
+import random
 
-class VistaHealthyChecker(Resource):
+class VistaHealthy(Resource):
     def get(self):
-        # url = ''
-        # response = requests.get(url)
-        nuevo_check = HealthyCheck(status='success', date="{}".format(datetime.utcnow()))
-        nuevo_check.save()
-        return nuevo_check.to_json()
+        x = random.random()
+        print("x = " + str(x))
+        print("Return: " + "200" if (x > 0.4) else "500")
+        if (x > 0.4):
+            return Response("Ok", status=200, mimetype='application/json')
+        else:
+            return Response("Fail", status=500, mimetype='application/json')
