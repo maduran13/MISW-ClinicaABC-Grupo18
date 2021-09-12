@@ -31,4 +31,3 @@ def do_healthcheck():
 scheduler = APScheduler()
 scheduler.add_job(id = 'Do a health check to reports', func = do_healthcheck, trigger = 'interval', seconds = 300)
 scheduler.start()
-
