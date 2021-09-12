@@ -46,10 +46,3 @@ flask run -p 5001
 cd monitor
 flask run -p 5002
 ```
-
-### Run grafana
-```
-git clone https://github.com/ajeje93/grafana-mongodb-docker.git
-cd grafana-mongodb-docker
-docker-compose up -d
-```
