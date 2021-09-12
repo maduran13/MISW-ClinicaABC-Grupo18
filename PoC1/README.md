@@ -6,7 +6,7 @@ Buscamos validar la detección de fallas en el funcionamiento del componente de 
   
     
 
-![Diagrama PoC](https://drive.google.com/file/d/17xKYJS3mSZpDdahclNV2Gwjq3tXetxpC/view?usp=sharing)
+![Diagrama PoC](https://user-images.githubusercontent.com/83253644/133001721-03ad018d-1550-4dde-835b-3400b93ef945.png)
 
 
   
