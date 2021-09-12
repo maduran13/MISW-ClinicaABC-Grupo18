@@ -26,7 +26,6 @@ def do_healthcheck():
 
         return response.status_code       
     except requests.exceptions.HTTPError as err:
-        print('Inside error block', err.response.status_code)
         nuevo_check = HealthyCheck(status_code=err.response.status_code, date="{}".format(datetime.utcnow()))
         nuevo_check.save()
         notifier = Notifier()
