@@ -2,17 +2,15 @@ import smtplib
 from flask_restful import Resource
 from flask import request
 
-sender = "Clinica ABC-Notifier <grupo.18@uniandes.edu.co>" 
-receivers = "Anderson Santamaria <andersonsantamaria3@gmail.com>" 
-
-def get_email(api, status_code, description):
-    
-    destinatarios = ['Anderson Santamaria <as.santamaria@uniandes.edu.co>', 
-    #'Andres Lopez <am.lopezr1@uniandes.edu.co>', 
+sender = "Clinica ABC-Notifier <notifier@clinica-abc.com>" 
+receivers = ['Anderson Santamaria <andersonsantamaria3@gmail.com>', 
+    'Miguel Duque <mduquem1@gmail.com>',
+    'Andres Lopez <am.lopezr1@uniandes.edu.co>', 
     'Marco Duran <ma.duran13@uniandes.edu.co>', 
-    #'Miguel Duque <m.duque12@uniandes.edu.co>'
+    'Juan Navarro <js.navarro87@uniandes.edu.co>'
     ]
-    
+
+def get_email(api, status_code, description):  
     subject = "Notification error on API " + api + " - " + str(status_code)
     
     own_message = """Hi! Team<br/> <br/> 

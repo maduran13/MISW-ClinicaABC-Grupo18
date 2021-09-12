@@ -1,5 +1,5 @@
-from flaskr.notifier import VistaNotifier
-from flaskr import create_app
+from notificador.notifier import VistaNotifier
+from notificador import create_app
 from flask_restful import Api
 from flask_cors import CORS
 
