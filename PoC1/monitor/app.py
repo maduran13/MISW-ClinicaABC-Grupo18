@@ -14,12 +14,16 @@ db.init_app(app)
 api = Api(app)
 
 def do_healthcheck():
-    url = 'http://127.0.0.1:5000/reportes/healthcheck'
+    url = 'http://127.0.0.1:5000/health-check'
     # response = requests.get(url)
     try:
         response = requests.get(url)
         nuevo_check = HealthyCheck(status_code=response.status_code, date="{}".format(datetime.utcnow()))
         nuevo_check.save()
+        if response.status_code != 200:
+            notifier = Notifier()
+            notifier.send_error_notification('Reportes', response.status_code, response.reason)
+
         return response.status_code       
     except requests.exceptions.HTTPError as err:
         nuevo_check = HealthyCheck(status_code=err.response.status_code, date="{}".format(datetime.utcnow()))
@@ -31,3 +35,4 @@ def do_healthcheck():
 scheduler = APScheduler()
 scheduler.add_job(id = 'Do a health check to reports', func = do_healthcheck, trigger = 'interval', seconds = 300)
 scheduler.start()
+
