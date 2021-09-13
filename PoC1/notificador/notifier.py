@@ -6,7 +6,8 @@ sender = "Clinica ABC-Notifier <notifier@clinica-abc.com>"
 receivers = ['Anderson Santamaria <andersonsantamaria3@gmail.com>', 
     'Miguel Duque <mduquem1@gmail.com>',
     'Andres Lopez <am.lopezr1@uniandes.edu.co>', 
-    'Marco Duran <ma.duran13@uniandes.edu.co>'
+    'Marco Duran <ma.duran13@uniandes.edu.co>', 
+    'Juan Navarro <js.navarro87@uniandes.edu.co>'
     ]
 
 def get_email(api, status_code, description):  
