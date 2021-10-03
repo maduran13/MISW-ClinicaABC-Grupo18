@@ -33,6 +33,12 @@ Para la configuración de docker en otros sistemas operativos se provee el sigui
 docker-compose up
 ```
 
+## Run gateway component
+```
+cd gateway
+flask run -p 5000
+```
+
 ## Run authorizing component
 ```
 cd authorizing

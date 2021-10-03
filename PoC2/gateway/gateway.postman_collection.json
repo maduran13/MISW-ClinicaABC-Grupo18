@@ -1,0 +1,90 @@
+{
+	"info": {
+		"_postman_id": "b9763e60-9138-4c75-a67e-1629942bdd7c",
+		"name": "Arquitectura",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "create user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"anderson2\",\n    \"password\": \"anderson2\",\n    \"role\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/signIn",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"signIn"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "log in user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"anderson2\",\n    \"password\": \"anderson2\",\n    \"role\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/logIn",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"logIn"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ver historia clinica de paciente",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"token\":\"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTYzMzIyMDY3MiwianRpIjoiNTcyNzVjNWEtZDM5YS00MDZjLWE5M2QtYjU2ODI2MzNlZjhiIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImFuZGVyc29uMiIsIm5iZiI6MTYzMzIyMDY3MiwiZXhwIjoxNjMzMjIxNTcyfQ.vjh3wN5KvBL-FJEIv7u-NOf_qJlNgxPthNSvAR_6XoM\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/historia-clinica",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"historia-clinica"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
