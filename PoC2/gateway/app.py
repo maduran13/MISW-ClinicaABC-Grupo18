@@ -17,7 +17,7 @@ class VistaSignIn(Resource):
         role=request.json["role"]
         myobj = {'name': name,'password': password,'role': role}
         response = requests.post(url, json = myobj)
-        return response.text
+        return response.json()
 
 class VistaLogIn(Resource):
     def post(self):
@@ -27,7 +27,7 @@ class VistaLogIn(Resource):
         url = 'http://127.0.0.1:5001/auth/userrole'
         myobj = {'name': name,'password': password,'role': role}
         response = requests.post(url, json = myobj)
-        return response.text
+        return response.json()
 
 class VistaHistoriaClinica(Resource): 
     def get(self):
@@ -40,7 +40,7 @@ class VistaHistoriaClinica(Resource):
 
         #llamar api de historia clinica
         response = requests.get('http://127.0.0.1:5002/historia-clinica')
-        return response.text
+        return response.json()
 
 api.add_resource(VistaSignIn, '/signIn')
 api.add_resource(VistaLogIn, '/logIn')
