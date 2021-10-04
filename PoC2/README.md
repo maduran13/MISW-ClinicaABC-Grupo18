@@ -33,8 +33,27 @@ Para la configuración de docker en otros sistemas operativos se provee el sigui
 docker-compose up
 ```
 
+## Run install dependencies 
+```
+pip install -r authorizing/requirements.txt
+pip install -r historiasCLinicas/requirements.txt
+pip install -r gateway/requirements.txt
+
+```
 ## Run authorizing component
 ```
 cd authorizing
 flask run -p 5001
+```
+
+## Run Historias Clinicas component
+```
+cd historiasCLinicas
+flask run -p 5002
+```
+
+## Run Gateway component
+```
+cd gateway
+flask run -p 5000
 ```

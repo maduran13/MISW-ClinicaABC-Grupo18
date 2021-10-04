@@ -3,7 +3,7 @@ from flask_restful import Resource, Api
 from flask import request
 import requests
 
-app = create_app('default')
+app = create_app()
 app_context = app.app_context()
 app_context.push()
 

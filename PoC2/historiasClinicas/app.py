@@ -1,8 +1,8 @@
 from flask_restful import Api
 from flask_cors import CORS
 
-from PoC2.historiasClinicas import create_app
-from PoC2.historiasClinicas.vistas import VistaHistoriaClinica
+from historiasClinicas import create_app
+from historiasClinicas.vistas import VistaHistoriaClinica
 
 
 app = create_app()
