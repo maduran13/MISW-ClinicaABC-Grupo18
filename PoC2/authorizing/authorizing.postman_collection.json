@@ -61,6 +61,34 @@
 				"description": "Esta petición permite crear usuarios en la BD asignandole una contraseña y un rol respectivo."
 			},
 			"response": []
+		},
+		{
+			"name": "Validar token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTYzMzIwNzMyMiwianRpIjoiNGQxNDQ5YTYtODhlMC00MGM0LWJjNDItOWVlNTRlZjY5YTY4IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImFkdXJ3IiwibmJmIjoxNjMzMjA3MzIyLCJleHAiOjE2MzMyMDgyMjJ9.xQxglYHIV6i6glw3YiASxuDHJfsxAUzaG_E0d4RmfaU\",\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5001/validate-token",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"validate-token"
+					]
+				},
+				"description": "Esta peticiòn permite validar si el token es válido o no"
+			},
+			"response": []
 		}
 	]
 }
