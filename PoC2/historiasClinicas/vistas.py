@@ -10,7 +10,7 @@ class VistaHistoriaClinica(Resource):
             "historia": [
                 {
                     "fecha": "29-08-2021",
-                    "sintomas": "Dolor de estomago".
+                    "sintomas": "Dolor de estomago",
                     "diagnostico": "Gastroenteritis"
                 }
             ]
