@@ -1,0 +1,66 @@
+{
+	"info": {
+		"_postman_id": "5be768f8-df44-4611-8686-c97ec62a25d8",
+		"name": "authorizing",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "generar token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"adur\",\r\n    \"password\": \"Hola123\",\r\n    \"role\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5001/auth/userrole",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"auth",
+						"userrole"
+					]
+				},
+				"description": "Esta peticiòn permite generar el token teniendo en cuenta que el usuario existe y su contraseña y rol son válidos. \r\nRol=1 es Administrativo\r\nRol=2 es Operador de la salud\r\nRol=3 es Proveedor"
+			},
+			"response": []
+		},
+		{
+			"name": "Crear Usuario",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"adur\",\r\n    \"password\": \"Hola123\",\r\n    \"role\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5001/signin",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"signin"
+					]
+				},
+				"description": "Esta petición permite crear usuarios en la BD asignandole una contraseña y un rol respectivo."
+			},
+			"response": []
+		}
+	]
+}
