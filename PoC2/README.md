@@ -7,8 +7,7 @@ Se busca validar el rol de un funcionario para autorizar su acceso a la informac
 
 | Microservicio      | Propósito y comportamiento esperado | Tecnología Asociada |
 | :---        |    :----:   |          :--- |
-| Authorizing      | Encargado de crear usuario con contraseña y rol respectivo en base de datos, y encargado de generar token de acuerdo al nombre, contraseña y rol del usuario.        | Python/ Flask   |
-| Validate Token   | Encargado de validar token y crear registros de las validaciones exitosas y fallidas.        | Python/ Flask      |
+| Authorizing      |  Encargado de crear usuario con contraseña y rol respectivo en base de datos, y encargado de generar token de acuerdo al nombre, contraseña y rol del usuario. Además, encargado de validar token y crear registros de las validaciones exitosas y fallidas.        | Python/ Flask   |
 | HistoriasClinicas   | Encargado de validar si el usuario que desea consultar el servicio cuenta con permisos y devolver la información del servicio.         | Python/ Flask      |
 | API Gateway | Encargado de enrutar las peticiones que lleguen al sistema y redireccione al microservicio requerido.       | Python/ Flask      |
 
