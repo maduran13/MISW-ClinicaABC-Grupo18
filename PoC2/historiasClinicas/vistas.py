@@ -3,15 +3,15 @@ from flask_restful import Resource
 
 class VistaHistoriaClinica(Resource):
     def get(self):
-        return nuevo_check.to_json({
-            id: 123,
-            paciente: "Pedro Gonzales",
-            fecha_nacimiento: "15/09-1985",
-            historia: [
+        return {
+            "id": 123,
+            "paciente": "Pedro Gonzales",
+            "fecha_nacimiento": "15/09-1985",
+            "historia": [
                 {
-                    fecha: "29-08-2021",
-                    sintomas: "Dolor de estomago".
-                    diagnostico: "Gastroenteritis"
+                    "fecha": "29-08-2021",
+                    "sintomas": "Dolor de estomago".
+                    "diagnostico": "Gastroenteritis"
                 }
             ]
-        })
+        }
